@@ -71,3 +71,11 @@ Create the symlink for vscode settings:
 ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
 ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ```
+
+### Backup dotfiles
+
+The changes you made for the linked files will be reflected in the dotfiles folder, so make sure to commit and push the changes to the repository. For backup of the homebrew packages, you can use the following command:
+
+```zsh
+brew bundle dump --describe --force --file=$HOME/dotfiles/Brewfile
+```
