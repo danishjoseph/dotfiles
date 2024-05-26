@@ -93,9 +93,7 @@
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.renderLineHighlight": "all",
   // "editor.fontLigatures": true,
-  "editor.fontFamily": "Iosevka Custom, Monaco",
-  "terminal.integrated.fontFamily": "Iosevka Custom, Monaco",
-  "debug.console.fontFamily": "Iosevka Custom, Monaco",
+  "editor.fontFamily": "Monaco",
 
   "explorer.compactFolders": false,
 
