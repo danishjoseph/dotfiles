@@ -135,5 +135,8 @@
   "[jsonnet]": {
     "editor.defaultFormatter": "Grafana.vscode-jsonnet"
   },
-  "github.copilot.editor.enableAutoCompletions": true
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.enable": {
+    "markdown": "true"
+  }
 }
