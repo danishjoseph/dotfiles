@@ -1,2 +1,15 @@
 #!/bin/bash
 set hidden
+set drawbox
+set scrolloff 10
+set info size:time
+
+map . set hidden!
+# unmap the default rename keybinding
+map r
+
+map i rename
+map I :rename; cmd-home
+map A :rename; cmd-end
+map c :rename; cmd-delete-home
+map C :rename; cmd-end; cmd-delete-home
