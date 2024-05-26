@@ -56,12 +56,14 @@ brew "vim"
 brew "wget"
 # JavaScript package manager
 brew "yarn"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
 # Feature-rich syntax highlighting for Zsh
 brew "zsh-fast-syntax-highlighting"
 # A Kubernetes credential (exec) plugin implementing azure authentication
 brew "azure/kubelogin/kubelogin"
-# Sans-serif, slab-serif, monospace and quasi‑proportional typeface family
-cask "font-iosevka"
+# Open-source code editor
+cask "visual-studio-code"
 vscode "angular.ng-template"
 vscode "aykutsarac.jsoncrack-vscode"
 vscode "dbaeumer.vscode-eslint"
