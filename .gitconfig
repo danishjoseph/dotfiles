@@ -1,0 +1,21 @@
+[user]
+	name = Danish Joseph
+	email = danishjoseph07@gmail.com
+
+[includeIf "gitdir:~/Developer/Work/**"]
+	path = ~/Developer/Work/work.gitconfig
+
+[alias]
+	ll = log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	ad = add
+	lg = log --oneline
+	diff-last = diff HEAD^
+	undo = checkout -
+	changes = diff HEAD
+
+[pull]
+	rebase = true
