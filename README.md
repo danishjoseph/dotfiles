@@ -31,7 +31,7 @@ ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
 Copy the files in the `.config` file to expected location
 
 ```zsh
-find $HOME/dotfiles/.config -type f -exec bash -c 'mkdir -p "$(dirname "$HOME/.config/${0#$HOME/dotfiles/.config/}")"; ln -s "$0" "$HOME/.config/${0#$HOME/dotfiles/.config/}"' {} \;
+find $HOME/dotfiles/.config -type f -exec bash -c 'mkdir -p "$(dirname "$HOME/.config/${0#$HOME/dotfiles/.config/}")"; [ -e "$HOME/.config/${0#$HOME/dotfiles/.config/}" ] || ln -s "$0" "$HOME/.config/${0#$HOME/dotfiles/.config/}"' {} \;
 ```
 
 ### Git Configuration
