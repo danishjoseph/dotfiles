@@ -8,8 +8,27 @@ Welcome to my personal dotfiles repository! This collection is designed to help 
 
 Before you begin, make sure you have the following installed on your Mac:
 
-- [Homebrew](https://brew.sh/)
-- [Clone this repository](www.github.com/danishjoseph/dotfiles)
+<details>
+<summary>Install Homebrew</summary>
+
+Install the brew package manager using the following command:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+</details>
+
+<details>
+<summary>Clone this repository</summary>
+
+Use the following command to clone this repository:
+
+```bash
+git clone https://github.com/danishjoseph/dotfiles.git
+```
+
+</details>
 
 ### Zsh Configuration
 
