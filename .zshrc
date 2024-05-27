@@ -7,10 +7,6 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
 bindkey 'kj' vi-cmd-mode
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
@@ -18,6 +14,12 @@ bindkey -M menuselect 'k' vi-up-line-or-history
 bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 bindkey -v '^?' backward-delete-char
+bindkey '^p' history-search-backward
+bindkey '^n' history-search-forward
+
+
+#Completion styling
+zstyle ':completion:*' list-colors "$f(s.:.)LS_COLORS}"
 
 
 # Edit line in vim with ctrl-e:
