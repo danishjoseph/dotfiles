@@ -38,11 +38,12 @@ Backup your existing `.zshrc` file (Optional but recommended):
 mv $HOME/.zshrc $HOME/.zshrc_backup
 ```
 
-Create symlinks for the `.zshrc` and `.zsh_aliases` files:
+Create symlinks for the `.vimrc`, `.zshrc` and `.zsh_aliases` files:
 
 ```zsh
 ln -s $HOME/dotfiles/.zsh_aliases $HOME/.zsh_aliases
 ln -s $HOME/dotfiles/.zshrc $HOME/.zshrc
+ln -s $HOME/dotfiles/.vimrc $HOME/.vimrc
 ```
 
 ### Config Files
