@@ -6,7 +6,7 @@ zstyle ':completion:*' menu select
 zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
-
+bindkey -v
 bindkey 'kj' vi-cmd-mode
 # Use vim keys in tab complete menu:
 bindkey -M menuselect 'h' vi-backward-char
