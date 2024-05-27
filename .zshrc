@@ -28,7 +28,6 @@ bindkey '^e' edit-command-line
 
 
 [ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
-[ -f "$HOME/.config/lf/lf.bash" ] && source "$HOME/.config/lf/lf.bash"
 # Loads nvm
 export NVM_DIR="$HOME/.nvm"
 source $(brew --prefix nvm)/nvm.sh
