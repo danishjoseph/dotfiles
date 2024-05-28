@@ -5,6 +5,7 @@
   "vim.smartRelativeLine": true,
   "vim.foldfix": true,
   "vim.timeout": 200,
+  "vim.surround": true,
   "vim.useSystemClipboard": true,
   "vim.insertModeKeyBindings": [
     {
@@ -89,6 +90,10 @@
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.bracketPairColorization.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.organizeImports": "explicit"
+  },
   "prettier.singleQuote": true,
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.renderLineHighlight": "all",
