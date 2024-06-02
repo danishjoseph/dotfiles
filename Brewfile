@@ -20,6 +20,8 @@ brew "contentful-cli"
 brew "entr"
 # Implementation of the Unicode BiDi algorithm
 brew "fribidi"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Go implementation of configuration language for defining JSON data
@@ -36,8 +38,6 @@ brew "jsonnet-bundler"
 brew "kcat"
 # Kubernetes command-line interface
 brew "kubernetes-cli"
-# Terminal file manager
-brew "lf"
 # Manage multiple Node.js versions
 brew "nvm"
 # Framework for layout and rendering of i18n text
