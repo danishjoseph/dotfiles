@@ -4,3 +4,6 @@ alias k='kubectl'
 alias ls='ls -lh --color=auto'
 alias ll='ls -lah'
 alias grep='grep --color=auto'
+
+# git aliases
+alias gl='fshow'

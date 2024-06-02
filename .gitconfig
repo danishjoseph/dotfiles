@@ -6,7 +6,6 @@
 	path = ~/Developer/Work/work.gitconfig
 
 [alias]
-	ll = log --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit
 	st = status
 	co = checkout
 	br = branch
