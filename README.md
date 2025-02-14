@@ -49,5 +49,5 @@ ln -s $HOME/dotfiles/.gitconfig $HOME/.gitconfig
 The changes you made for the linked files will be reflected in the dotfiles folder, so make sure to commit and push the changes to the repository. For backup of the homebrew packages, you can use the following command:
 
 ```zsh
-brew bundle dump --describe --force --file=$HOME/dotfiles/Brewfile
+brew bundle dump --describe --force --file=$HOME/dotfiles/homebrew/Brewfile
 ```
