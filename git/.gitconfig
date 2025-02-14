@@ -1,0 +1,9 @@
+[user]
+	name = Danish Joseph
+	email = danishjoseph07@gmail.com
+
+[includeIf "gitdir:~/Developer/Work/**"]
+	path = ~/Developer/Work/work.gitconfig
+
+[pull]
+	rebase = true

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular/cli": "^18.2.9",
+    "create-nx-workspace": "^19.3.0",
+    "nx": "^20.0.1"
+  }
+}

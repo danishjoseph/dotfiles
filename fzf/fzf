@@ -1,0 +1,68 @@
+# https://github.com/junegunn/fzf/wiki/examples#git
+
+# fshow - git commit browser
+fshow() {
+  git log --graph --color=always \
+      --format="%Cred%h%Creset - %s %Cgreen(%ar) %C(bold blue)[%an]%Creset%C(yellow)%d%Creset" "$@" |
+  fzf --ansi --no-sort --reverse --tiebreak=index --bind=ctrl-s:toggle-sort \
+      --bind "ctrl-m:execute:
+                (grep -o '[a-f0-9]\{7\}' | head -1 |
+                xargs -I % sh -c 'git show --color=always % | less -R') << 'FZF-EOF'
+                {}
+FZF-EOF"
+}
+
+alias kgp='kubectl get pods --all-namespaces'
+alias kgs='kubectl get services --all-namespaces'
+
+function kLogsPreviewAllContainers() {
+    kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace} {.metadata.name}{"\n"}' | fzf --preview="kubectl logs {2} --namespace {1} --all-containers" --preview-window=up:80%
+}
+alias klogsp=kLogsPreviewAllContainers
+
+function kLogsAllContainers() {
+    kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace} {.metadata.name}{"\n"}' | fzf | read -r namespace pod
+    kubectl logs $pod --namespace $namespace --all-containers -f
+}
+alias klogs=kLogsAllContainers
+
+function kLogsAllContainersAllPodsInDeployment() {
+    kubectl get deployments --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace} {.metadata.name}{"\n"}' | fzf | read -r namespace deployment
+    kubectl logs -f deployment/$deployment --namespace $namespace -f
+}
+alias klogsdeployment=kLogsAllContainersAllPodsInDeployment
+
+function kLogsContainer() {
+    # The first argument to this function should be the container name
+    # kubectl get pods -o name | fzf --preview="kubectl logs {} --container $1 | tail -20" --preview-window=up:80%
+    local container
+    container=$1
+    if [[ ! -z "${container// }" ]]; then
+        kubectl get pods --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace} {.metadata.name}{"\n"}' | fzf --preview="echo kubectl logs {2} --namespace {1} --container $container" --preview-window=up:80% --preview-label="Logs for container $1"
+    else
+        print "Usage: kLogsContainer <container name>"
+    fi
+}
+
+
+
+function kd() {
+    kubectl get $1 --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\n"}' | fzf --preview="echo '{}' | xargs kubectl describe $1 -n" | xargs kubectl describe $1 -n
+}
+
+function kdelete() {
+    kubectl get $1 --all-namespaces -o jsonpath='{range .items[*]}{.metadata.namespace}{"\t"}{.metadata.name}{"\n"}' | fzf | xargs kubectl delete $1 -n
+}
+
+alias kdpod='kd pod'
+
+alias kdelpod='kdelete pod'
+
+alias kdservice='kd service'
+
+alias kdelservice='kdelete service'
+
+alias kg='kubectl get '
+
+function kgevents() {  kubectl get events --sort-by='.metadata.creationTimestamp'  }
+alias kgev=kgevents

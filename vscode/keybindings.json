@@ -1,146 +1,125 @@
 [
-  // Move to the previous/next editor.
-  {
-    "key": "cmd+l",
-    "command": "workbench.action.nextEditor"
-  },
-  {
-    "key": "cmd+h",
-    "command": "workbench.action.previousEditor"
-  },
-
-  // Move active editor left or right (useful for full-stack web dev).
-  {
-    "key": "cmd+ctrl+h",
-    "command": "moveActiveEditor",
-    "args": {
-      "to": "left"
+    // Move to the previous/next editor.
+    {
+        "key": "cmd+l",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "cmd+h",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    // Move active editor left or right (useful for full-stack web dev).
+    {
+        "key": "cmd+ctrl+h",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "left"
+        }
+    },
+    {
+        "key": "cmd+ctrl+l",
+        "command": "moveActiveEditor",
+        "args": {
+            "to": "right"
+        }
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    // Traverse VSCode IntelliSense suggestions with vim keybindings.
+    {
+        "key": "cmd+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "cmd+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    // Traverse VSCode quick open options with vim keybindings.
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    // VSCode terminal commands.
+    {
+        "key": "cmd+n",
+        "command": "workbench.action.terminal.newInActiveWorkspace"
+    },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "cmd+ctrl+enter",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "cmd+d",
+        "command": "workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+\\",
+        "command": "-workbench.action.terminal.split",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+k",
+        "command": "workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+cmd+down",
+        "command": "-workbench.action.terminal.focusNextPane",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+j",
+        "command": "workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+cmd+up",
+        "command": "-workbench.action.terminal.focusPreviousPane",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "cmd+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "-editor.action.previousMatchFindAction",
+        "when": "editorFocus"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "-workbench.action.terminal.findPrevious",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "-workbench.action.terminal.openDetectedLink",
+        "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
+    },
+    {
+        "key": "shift+cmd+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
     }
-  },
-  {
-    "key": "cmd+ctrl+l",
-    "command": "moveActiveEditor",
-    "args": {
-      "to": "right"
-    }
-  },
-  {
-    "key": "cmd+j",
-    "command": "workbench.action.focusActiveEditorGroup"
-  },
-  // Traverse VSCode IntelliSense suggestions with vim keybindings.
-  {
-    "key": "cmd+j",
-    "command": "selectNextSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-  {
-    "key": "cmd+k",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
-  },
-
-  // Traverse VSCode quick open options with vim keybindings.
-  {
-    "key": "cmd+j",
-    "command": "workbench.action.quickOpenSelectNext",
-    "when": "inQuickOpen"
-  },
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.quickOpenSelectPrevious",
-    "when": "inQuickOpen"
-  },
-
-  // VSCode terminal commands.
-  {
-    "key": "cmd+n",
-    "command": "workbench.action.terminal.newInActiveWorkspace"
-  },
-  {
-    "key": "cmd+enter",
-    "command": "workbench.action.terminal.toggleTerminal"
-  },
-  {
-    "key": "cmd+ctrl+enter",
-    "command": "workbench.action.toggleMaximizedPanel"
-  },
-  {
-    "key": "cmd+d",
-    "command": "workbench.action.terminal.split",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+\\",
-    "command": "-workbench.action.terminal.split",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+cmd+down",
-    "command": "-workbench.action.terminal.focusNextPane",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+j",
-    "command": "workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "alt+cmd+up",
-    "command": "-workbench.action.terminal.focusPreviousPane",
-    "when": "terminalFocus && terminalProcessSupported"
-  },
-  {
-    "key": "cmd+w",
-    "command": "workbench.action.terminal.kill",
-    "when": "terminalFocus"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-editor.action.previousMatchFindAction",
-    "when": "editorFocus"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-workbench.action.terminal.findPrevious",
-    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocusInAny && terminalHasBeenCreated || terminalFocusInAny && terminalProcessSupported"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "-workbench.action.terminal.openDetectedLink",
-    "when": "accessibleViewIsShown && terminalHasBeenCreated && accessibleViewCurrentProviderId == 'terminal'"
-  },
-  {
-    "key": "shift+cmd+g",
-    "command": "workbench.view.scm",
-    "when": "workbench.scm.active"
-  },
-  {
-    "key": "ctrl+shift+g",
-    "command": "-workbench.view.scm",
-    "when": "workbench.scm.active"
-  },
-  {
-    "key": "cmd+shift+c",
-    "command": "workbench.panel.chat.view.copilot.focus"
-  }
-
-  // TODO: Traverse search results with vim
-  // {
-  //   "key": "cmd+j",
-  //   "command": "search.action.focusNextSearchResult",
-  //   "when": "hasSearchResult && workbench.view.search.visible"
-  // },
-
-  // TODO: Select file from explorer.
-  // {
-  //   "key": "cmd+enter",
-  //   "command": "filesExplorer.openFilePreserveFocus",
-  //   "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsFolder && !inputFocus"
-  // },
 ]
