@@ -34,7 +34,7 @@ export FZF_DEFAULT_OPTS="--bind 'ctrl-j:down,ctrl-k:up,ctrl-h:preview-up,ctrl-l:
 export FZF_CTRL_T_OPTS="--preview 'cat {}'"
 
 
-[ -f "$HOME/.zsh_aliases" ] && source "$HOME/.zsh_aliases"
+[ -f "$HOME/.config/zsh/.zsh_aliases" ] && source "$HOME/.config/zsh/.zsh_aliases"
 [ -f "$HOME/.config/fzf/fzf" ] && source "$HOME/.config/fzf/fzf"
 # Loads nvm
 export NVM_DIR="$HOME/.nvm"
