@@ -35,6 +35,7 @@ export FZF_CTRL_T_OPTS="--preview 'cat {}'"
 
 
 [ -f "$HOME/.config/zsh/.zsh_aliases" ] && source "$HOME/.config/zsh/.zsh_aliases"
+[ -f "$HOME/.config/zsh/.zsh_env" ] && source "$HOME/.config/zsh/.zsh_env"
 [ -f "$HOME/.config/fzf/fzf" ] && source "$HOME/.config/fzf/fzf"
 # Loads nvm
 export NVM_DIR="$HOME/.nvm"
