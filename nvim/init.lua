@@ -27,4 +27,5 @@ require("lazy").setup({
 	require("plugins.misc"),
 	require("plugins.nvim-surround"),
 	require("plugins.tmux-navigator"),
+	require("plugins.gp"),
 })
