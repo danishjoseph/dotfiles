@@ -28,4 +28,5 @@ require("lazy").setup({
 	require("plugins.nvim-surround"),
 	require("plugins.tmux-navigator"),
 	require("plugins.gp"),
+	require("plugins.smear-cursor"),
 })
