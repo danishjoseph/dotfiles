@@ -36,8 +36,6 @@ brew "go"
 brew "go-jsonnet"
 # OpenType text shaping engine
 brew "harfbuzz"
-# HTTP load generator, ApacheBench (ab) replacement
-brew "hey"
 # Configurable static site generator
 brew "hugo"
 # Lightweight and flexible command-line JSON processor
