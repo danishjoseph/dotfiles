@@ -38,4 +38,5 @@ require("lazy").setup({
 	require("plugins.tmux-navigator"),
 	require("plugins.gp"),
 	require("plugins.smear-cursor"),
+	require("plugins.database"),
 })
