@@ -31,6 +31,7 @@ require("lazy").setup({
 	require("plugins.lsp"),
 	require("plugins.autocompletion"),
 	require("plugins.autoformatting"),
+	require("plugins.linting"),
 	require("plugins.gitsigns"),
 	require("plugins.lazygit"),
 	require("plugins.misc"),
@@ -39,4 +40,5 @@ require("lazy").setup({
 	require("plugins.gp"),
 	require("plugins.smear-cursor"),
 	require("plugins.database"),
+	require("plugins.curl"),
 })
