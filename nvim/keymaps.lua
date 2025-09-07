@@ -1,9 +1,5 @@
 -- Keymaps for better default experience
 
--- Set leader key
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
-
 -- For conciseness
 local opts = { noremap = true, silent = true }
 
@@ -46,7 +42,7 @@ vim.keymap.set("n", "<Right>", ":vertical resize +2<CR>", opts)
 -- Buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>", opts)
 vim.keymap.set("n", "<S-Tab>", ":bprevious<CR>", opts)
-vim.keymap.set("n", "<leader>x", ":Bdelete!<CR>", opts)   -- close buffer
+vim.keymap.set("n", "<leader>x", ":bdelete!<CR>", opts)   -- close buffer
 vim.keymap.set("n", "<leader>b", "<cmd> enew <CR>", opts) -- new buffer
 
 -- Increment/decrement numbers
@@ -54,8 +50,8 @@ vim.keymap.set("n", "<leader>+", "<C-a>", opts) -- increment
 vim.keymap.set("n", "<leader>-", "<C-x>", opts) -- decrement
 
 -- Window management
-vim.keymap.set("n", "<leader>v", "<C-w>v", opts)      -- split window vertically
-vim.keymap.set("n", "<leader>h", "<C-w>s", opts)      -- split window horizontally
+vim.keymap.set("n", "<leader>s", "<C-w>v", opts)      -- split window vertically
+vim.keymap.set("n", "<leader>v", "<C-w>s", opts)      -- split window horizontally
 vim.keymap.set("n", "<leader>se", "<C-w>=", opts)     -- make split windows equal width & height
 vim.keymap.set("n", "<leader>xs", ":close<CR>", opts) -- close current split window
 
@@ -90,21 +86,5 @@ vim.keymap.set("n", "<leader>j", "*``cgn", opts)
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
--- Toggle diagnostics
-local diagnostics_active = true
-
-vim.keymap.set("n", "<leader>do", function()
-    diagnostics_active = not diagnostics_active
-
-    if diagnostics_active then
-        vim.diagnostic.enable(true)
-    else
-        vim.diagnostic.enable(false)
-    end
-end)
-
--- Diagnostic keymaps
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
-vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostics list" })
+-- Lazygit keymap
+vim.keymap.set("n", "<leader>lg", "<cmd>LazyGit<cr>", { desc = "Open LazyGit" })
