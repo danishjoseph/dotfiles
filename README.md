@@ -1,4 +1,4 @@
-# Danish Joseph's Dotfiles
+# Danish Joseph's Nix Dotfiles
 
 Welcome to my personal dotfiles repository! This collection is designed to help you set up your system with my preferred configurations. Feel free to explore, use, and adapt these dotfiles for your own setup. This repo has been migrated from traditional script based system to Nix based configuration which will undergo major modifications as Im learning nix along the way.This used to set up my development environment, configured with Neovim and all the essential tools.
 
