@@ -56,6 +56,7 @@ Clone this repository
 
 ```bash
 git clone https://github.com/danishjoseph/dotfiles.git
+cd dotfiles/
 
 ```
 
@@ -63,6 +64,8 @@ Unlock the secrets
 
 ```bash
 git-crypt unlock
+<enter the passpharse>
+
 
 ```
 
@@ -72,4 +75,7 @@ Apply Home Manager config
 nix run home-manager -- switch --flake .#ubuntu
 
 ```
+
+Tada! you have made it. Just logout and log back in you will see all the configurations applied. The current setup includes [starship](https://starship.rs), [neovim](https://neovim.io), [tmux](https://github.com/tmux/tmux/wiki), [lazygit](https://github.com/jesseduffield/lazygit) and much more that you can explore.
+
 
