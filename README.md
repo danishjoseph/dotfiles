@@ -79,3 +79,9 @@ nix run home-manager -- switch --flake .#ubuntu
 Tada! you have made it. Just logout and log back in you will see all the configurations applied. The current setup includes [starship](https://starship.rs), [neovim](https://neovim.io), [tmux](https://github.com/tmux/tmux/wiki), [lazygit](https://github.com/jesseduffield/lazygit) and much more that you can explore.
 
 
+
+<img width="990" height="424" alt="Ubuntu nix" src="https://github.com/user-attachments/assets/39a27ca0-8b91-4038-b919-58f39a03ab27" />
+
+
+
+
