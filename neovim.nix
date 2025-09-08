@@ -63,14 +63,14 @@ in
     (openaiCreds.AZURE_ENDPOINT or "")
   ];
 
-  extraConfig = ''
-    luafile ${toString ./nvim/settings.lua}
-    luafile ${toString ./nvim/keymaps.lua}
-    luafile ${toString ./nvim/colorscheme.lua}
-    luafile ${toString ./nvim/oil.lua}
-    luafile ${toString ./nvim/lsp.lua}
-    luafile ${toString ./nvim/gp.lua}
-    luafile ${toString ./nvim/fuzzy.lua}
+  extraLuaConfig = ''
+    ${builtins.readFile ./nvim/settings.lua}
+    ${builtins.readFile ./nvim/keymaps.lua}
+    ${builtins.readFile ./nvim/colorscheme.lua}
+    ${builtins.readFile ./nvim/oil.lua}
+    ${builtins.readFile ./nvim/lsp.lua}
+    ${builtins.readFile ./nvim/gp.lua}
+    ${builtins.readFile ./nvim/fuzzy.lua}
   '';
 
 }
